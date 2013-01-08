@@ -81,11 +81,11 @@ CGFloat SVProgressHUDRingThickness = 6;
 #pragma mark - Show Methods
 
 + (void)show {
-    [[SVProgressHUD sharedView] showProgress:-1 status:nil maskType:SVProgressHUDMaskTypeNone];
+    [[SVProgressHUD sharedView] showProgress:-1 status:nil maskType:SVProgressHUDMaskTypeGradient];
 }
 
 + (void)showWithStatus:(NSString *)status {
-    [[SVProgressHUD sharedView] showProgress:-1 status:status maskType:SVProgressHUDMaskTypeNone];
+    [[SVProgressHUD sharedView] showProgress:-1 status:status maskType:SVProgressHUDMaskTypeGradient];
 }
 
 + (void)showWithMaskType:(SVProgressHUDMaskType)maskType {
@@ -97,11 +97,11 @@ CGFloat SVProgressHUDRingThickness = 6;
 }
 
 + (void)showProgress:(CGFloat)progress {
-    [[SVProgressHUD sharedView] showProgress:progress status:nil maskType:SVProgressHUDMaskTypeNone];
+    [[SVProgressHUD sharedView] showProgress:progress status:nil maskType:SVProgressHUDMaskTypeGradient];
 }
 
 + (void)showProgress:(CGFloat)progress status:(NSString *)status {
-    [[SVProgressHUD sharedView] showProgress:progress status:status maskType:SVProgressHUDMaskTypeNone];
+    [[SVProgressHUD sharedView] showProgress:progress status:status maskType:SVProgressHUDMaskTypeGradient];
 }
 
 + (void)showProgress:(CGFloat)progress status:(NSString *)status maskType:(SVProgressHUDMaskType)maskType {
