@@ -44,6 +44,12 @@ typedef NSUInteger SVProgressHUDMaskType;
 + (void)showErrorWithStatus:(NSString *)string;
 + (void)showImage:(UIImage*)image status:(NSString*)status; // use 28x28 white pngs
 
+// same as above, but with custom duration
++ (void)showSuccessWithStatus:(NSString *)string duration:(NSTimeInterval)duration;
++ (void)showErrorWithStatus:(NSString *)string duration:(NSTimeInterval)duration;
++ (void)showImage:(UIImage *)image status:(NSString *)string duration:(NSTimeInterval)duration;
+
+
 + (void)dismiss;
 
 + (BOOL)isVisible;

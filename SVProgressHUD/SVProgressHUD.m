@@ -111,15 +111,27 @@ CGFloat SVProgressHUDRingThickness = 6;
 #pragma mark - Show then dismiss methods
 
 + (void)showSuccessWithStatus:(NSString *)string {
-    [SVProgressHUD showImage:[UIImage imageNamed:@"SVProgressHUD.bundle/success.png"] status:string];
+	[self showSuccessWithStatus:string duration:1.0];
+}
+
++ (void)showSuccessWithStatus:(NSString *)string duration:(NSTimeInterval)duration {
+    [SVProgressHUD showImage:[UIImage imageNamed:@"SVProgressHUD.bundle/success.png"] status:string duration:duration];
 }
 
 + (void)showErrorWithStatus:(NSString *)string {
-    [SVProgressHUD showImage:[UIImage imageNamed:@"SVProgressHUD.bundle/error.png"] status:string];
+    [self showErrorWithStatus:string duration:1.0];
+}
+
++ (void)showErrorWithStatus:(NSString *)string duration:(NSTimeInterval)duration {
+    [SVProgressHUD showImage:[UIImage imageNamed:@"SVProgressHUD.bundle/error.png"] status:string duration:duration];
 }
 
 + (void)showImage:(UIImage *)image status:(NSString *)string {
-    [[SVProgressHUD sharedView] showImage:image status:string duration:1.0];
+    [self showImage:image status:string duration:1.0];
+}
+
++ (void)showImage:(UIImage *)image status:(NSString *)string duration:(NSTimeInterval)duration {
+    [[SVProgressHUD sharedView] showImage:image status:string duration:duration];
 }
 
 
